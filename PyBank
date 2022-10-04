@@ -1,1 +1,63 @@
+#Create os and csv
+import os
+import csv
 
+bank_csv = os.path.join( "Resources", "budget_data_csv")
+
+#Add months profit and change lists
+months = []
+profit = []
+change = []
+change_per = []
+
+
+with open(bank_csv) as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
+    
+    headers = next(csvreader)
+
+    for row in csvreader:
+
+        #Add the months
+        months.append(row[0])
+        #Add my profit the same way different row
+        profit.append(row[1])
+
+
+#Calculate the total, had to use notes for this section
+total = 0
+for i in profit:
+    total = float(i) + total
+
+#Total number of months
+number of months = len(months)
+
+
+#Determine the change
+for j in range(1, month):
+    change.append(float(profit[j]) - float(profit[j - 1]))
+
+
+averagechange = 0
+for i in change:
+    averagechange = float(i) + total change / (month_count -1)
+
+
+
+
+#Print Results
+print_file = (f" Finacial Analysis "
+        f" Total Months: {month_count}"
+        f" Total: ${total}"
+        f" Average Change: $(average_change)"
+        f" Greatest increase in profits: {maxdate} - {maxinc}"
+        f" Greatest decrease in profits: {mindate} - {maxdec}")
+
+finish print
+
+#create text file
+results = os.pth.join("Analysis", "PyBank_Analysis.txt")
+
+with open(results, "w") as textfile:
+    textfile.write(analysis_out)
+    
