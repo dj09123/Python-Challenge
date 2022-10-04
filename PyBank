@@ -42,6 +42,12 @@ averagechange = 0
 for i in change:
     averagechange = float(i) + total change / (month_count -1)
 
+#forgot to identify max and min
+maxinc = max(change)
+maxdec = min(change)
+
+maxdate = months(maxindex)
+mindate = months(minindex)
 
 
 
